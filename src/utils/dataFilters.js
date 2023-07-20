@@ -1,29 +1,35 @@
-const speciesArray = [
-    "Human",
-    "Alien",
-    "Humanoid",
-    "Robot",
-    "Animal",
-    "Unknown",
-    "Mythological Creature",
-    "Disease",
-    "Planet",
-    "Cronenberg",
-    "Poppybutthole",
+const speciesData = [
+    { label: "Nothing", value: '' },
+    { label: "Human", value: "Human" },
+    { label: "Alien", value: "Alien" },
+    { label: "Humanoid", value: "Humanoid" },
+    { label: "Robot", value: "Robot" },
+    { label: "Animal", value: "Animal" },
+    { label: "Unknown", value: "Unknown" },
+    { label: "Mythological", value: "Mythological" },
+    { label: "Disease", value: "Disease" },
+    { label: "Planet", value: "Planet" },
+    { label: "Cronenberg", value: "Cronenberg" },
+    { label: "Poppybutthole", value: "Poopybutthole" },
 ];
 
-const genderArray = [
-    "Female",
-    "Male",
-    "Genderless",
-    "Unknown",
+const genderData = [
+    { label: "Nothing", value: '' },
+    { label: "Female", value: "Female" },
+    { label: "Male", value: "Male" },
+    { label: "Genderless", value: "Genderless" },
+    { label: "Unknown", value: "unknown                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  " },
 ];
 
-const statusArray = [
-    "Alive",
-    "Dead",
-    "Unknown",
+const statusData = [
+    { label: "Nothing", value: '' },
+    { label: "Alive", value: "Alive" },
+    { label: "Dead", value: "Dead" },
+    { label: "Unknown", value: "Unknown" },
 ];
 
 
-export { speciesArray, genderArray, statusArray };
+
+
+
+export { speciesData, genderData, statusData };

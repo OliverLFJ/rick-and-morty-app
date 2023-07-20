@@ -14,6 +14,8 @@ export const DataContextProvider = ({ children }) => {
     const [nextStatus, setNextStatus] = useState(false)
     const [buttonFind, setButtonFind] = useState(false)
 
+    const [dontFind, setDonFind] = useState(false)
+
     //State variables to filter the API
 
     const initialState = {
@@ -32,19 +34,16 @@ export const DataContextProvider = ({ children }) => {
 
 
     useEffect(() => {
-        fetch(`https://rickandmortyapi.com/api/character/?page=${pageSelected}&name=${state.name}&status=${state.status}&specie=${state.specie}&gender=${state.gender}`)
+        fetch(`https://rickandmortyapi.com/api/character/?page=${pageSelected}&name=${state.name}&status=${state.status}&gender=${state.gender}&species=${state.specie}`)
             .then((response) => {
-                if (!response.ok) {
-                    throw new Error("Network response was not ok");
-                }
                 return response.json();
             })
             .then((data) => {
                 setCharacters(data.results);
                 setPages(data.info.pages);
+                setDonFind(false)
             })
             .catch((error) => {
-                console.error("Error fetching data:", error);
                 setCharacters([])
                 setPageSelected(1)
                 setPagesInComponent([])
@@ -53,8 +52,9 @@ export const DataContextProvider = ({ children }) => {
                 setButtonFind(false)
                 setNextStatus(false)
                 setPrevStatus(false)
+                setDonFind(true)
             });
-    }, [pageSelected, state.name, state.status, state.specie, state.gender]);
+    }, [pageSelected, state.name, state.status, state.specie, state.gender, state]);
 
     useEffect(() => {
         setPagesInComponent([]);
@@ -93,7 +93,9 @@ export const DataContextProvider = ({ children }) => {
                 prevStatus,
                 buttonFind,
                 setPagesInComponent,
-                dispatch
+                dispatch,
+                state,
+                dontFind
             }}
         >
             {children}

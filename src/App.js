@@ -17,8 +17,8 @@ const App = () => {
   return (
     <div className='container' onScroll={handleScroll}>
       <Router>
-        <Header />
         <DataContextProvider>
+          <Header />
           <EpisodesContextProvider>
             <DataLocationsProvider>
               <Content />

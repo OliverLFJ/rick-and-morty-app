@@ -1,6 +1,7 @@
 import { useDataContext } from "../../contexts/DataContext"
-import { speciesArray, genderArray, statusArray } from './../../utils/dataFilters.js'
+import { speciesData, genderData, statusData } from './../../utils/dataFilters.js'
 import { SET_NAME, SET_STATUS, SET_SPECIE, SET_GENDER } from './../../reducers/actionType';
+import { useEffect } from "react";
 
 
 const FiltersCharacters = () => {
@@ -31,20 +32,31 @@ const FiltersCharacters = () => {
         dispatch({ type: SET_GENDER, payload: event.target.value });
     };
 
+    const cleanAllFilter = () => {
+        dispatch({ type: SET_NAME, payload: '' });
+        dispatch({ type: SET_STATUS, payload: '' });
+        dispatch({ type: SET_SPECIE, payload: '' });
+        dispatch({ type: SET_GENDER, payload: '' });
+    }
 
     return (
         <div className="filters-container">
-            <div className="form-content">
-                <label className="label-filter">Name</label>
-                <input onChange={(e) => putName(e)} className="form-input" placeholder="Write name to filter" />
+            <div className="filter-name-button">
+                <div className="name-filter">
+                    <label className="label-filter">Name</label>
+                    <input value={state && state.name} onChange={(e) => putName(e)} className="form-input" placeholder="Write name to filter" />
+                </div>
+                <div className="clean-container">
+                    <button className="clean-button" onClick={cleanAllFilter}>Clean Filters</button>
+                </div>
             </div>
             <div className="form-group">
                 <div className="form-content">
                     <label className="label-filter">Status</label>
                     <select className="form-input-select" value={state && state.status} onChange={(e) => putStatus(e)}>
-                        {statusArray.map((item, index) => {
+                        {statusData.map((item, index) => {
                             return (
-                                <option key={index} className="form-input-select" value={item}>{item}</option>
+                                <option key={index} className="form-input-option" value={item.value}>{item.label}</option>
                             )
                         })}
                     </select>
@@ -52,9 +64,9 @@ const FiltersCharacters = () => {
                 <div className="form-content">
                     <label className="label-filter">Specie</label>
                     <select className="form-input-select" value={state && state.specie} onChange={(e) => putSpecie(e)}>
-                        {speciesArray.map((item, index) => {
+                        {speciesData.map((item, index) => {
                             return (
-                                <option key={index} className="form-input-select" value={item}>{item}</option>
+                                <option key={index} className="form-input-option" value={item.value}>{item.label}</option>
                             )
                         })}
 
@@ -63,9 +75,9 @@ const FiltersCharacters = () => {
                 <div className="form-content">
                     <label className="label-filter">Gender</label>
                     <select className="form-input-select" value={state && state.gender} onChange={(e) => putGender(e)}>
-                        {genderArray.map((item, index) => {
+                        {genderData.map((item, index) => {
                             return (
-                                <option key={index} className="form-input-select" value={item}>{item}</option>
+                                <option key={index} className="form-input-option" value={item.value}>{item.label}</option>
                             )
                         })}
                     </select>
