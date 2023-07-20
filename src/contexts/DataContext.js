@@ -1,4 +1,5 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useReducer, useState } from "react";
+import filtersReducer from "../reducers/filtersReducer";
 
 const DataContext = createContext();
 export const useDataContext = () => useContext(DataContext);
@@ -15,10 +16,13 @@ export const DataContextProvider = ({ children }) => {
 
     //State variables to filter the API
 
-    const [name, setName] = useState('')
-    const [status, setStatus] = useState('')
-    const [specie, setSpecie] = useState('')
-    const [gender, setGender] = useState('')
+    const initialState = {
+        name: '',
+        status: '',
+        specie: '',
+        gender: ''
+    };
+    const [state, dispatch] = useReducer(filtersReducer, initialState);
 
     useEffect(() => {
         fetch('https://rickandmortyapi.com/api/character?page=42')
@@ -28,7 +32,7 @@ export const DataContextProvider = ({ children }) => {
 
 
     useEffect(() => {
-        fetch(`https://rickandmortyapi.com/api/character/?page=${pageSelected}&name=${name}&status=${status}&specie=${specie}&gender=${gender}`)
+        fetch(`https://rickandmortyapi.com/api/character/?page=${pageSelected}&name=${state.name}&status=${state.status}&specie=${state.specie}&gender=${state.gender}`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
@@ -50,7 +54,7 @@ export const DataContextProvider = ({ children }) => {
                 setNextStatus(false)
                 setPrevStatus(false)
             });
-    }, [pageSelected, name, status, specie, gender]);
+    }, [pageSelected, state.name, state.status, state.specie, state.gender]);
 
     useEffect(() => {
         setPagesInComponent([]);
@@ -88,14 +92,8 @@ export const DataContextProvider = ({ children }) => {
                 nextStatus,
                 prevStatus,
                 buttonFind,
-                setGender,
-                setSpecie,
-                setStatus,
-                setName,
-                status,
-                specie,
-                gender,
-                setPagesInComponent
+                setPagesInComponent,
+                dispatch
             }}
         >
             {children}
