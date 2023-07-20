@@ -208,7 +208,7 @@ html {
   height: 80%;
   border-radius: inherit;
   filter: contrast(120%);
-  aspect-ratio: auto 16 / 1; 
+  aspect-ratio: auto 16 / 1;
 }
 
 .info-character {
@@ -353,31 +353,23 @@ html {
   align-items: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  gap: 3rem;
+  gap: 1rem;
 }
 
-.next-page,
-.prev-page {
-  width: 27%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.button-paginate {
+  background-color: #1a5b66;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 9px;
+  color: #97ce4c;
   border: none;
-  font-size: 1.3rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  color: #ffffff;
-  border-radius: 0.3rem;
+}
+
+.active-button {
   background-color: #97ce4c;
-}
-
-.prev-page:hover {
-  background-color: #1a5b66;
-  transform: scale(0.90);
-}
-
-.next-page:hover {
-  background-color: #1a5b66;
-  transform: scale(0.90);
+  color: #1a5b66;
 }
 
 .title-episode {

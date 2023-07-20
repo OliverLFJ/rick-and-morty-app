@@ -5,48 +5,65 @@ export const useDataContext = () => useContext(DataContext);
 export const DataContextProvider = ({ children }) => {
     const [characters, setCharacters] = useState([]);
     const [recenCharacters, setRecentCharacters] = useState([])
-    const [nextCharacter, setNextCharacter] = useState(
-        "https://rickandmortyapi.com/api/character"
-    );
+    const [pages, setPages] = useState(0)
+    const [pagesInComponent, setPagesInComponent] = useState([])
+    const [totalButtons, setTotalButtons] = useState([])
+    const [pageSelected, setPageSelected] = useState(1)
+    const [prevStatus, setPrevStatus] = useState(false)
+    const [nextStatus, setNextStatus] = useState(false)
+    const [buttonFind, setButtonFind] = useState(false)
+
     useEffect(() => {
         fetch('https://rickandmortyapi.com/api/character?page=42')
             .then((response) => response.json())
             .then((data) => setRecentCharacters(data.results))
     }, [])
-    const [prevCharacter, setPrevCharacter] = useState(null);
-    const fetchData = (type, url, setData, setNext, setPrev) => {
-        fetch(url)
+
+
+    useEffect(() => {
+        fetch(`https://rickandmortyapi.com/api/character/?page=${pageSelected}&name=&status=&specie=&gender=`)
             .then((response) => response.json())
             .then((data) => {
-                setData(data.results);
-                setNext(data.info.next);
-                setPrev(data.info.prev);
+                setCharacters(data.results);
+                setPages(data.info.pages);
             });
-    };
+    }, [pageSelected]);
+
     useEffect(() => {
-        fetchData("character", nextCharacter, setCharacters, setNextCharacter, setPrevCharacter);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    const handleNextPage = (type) => {
-        if (type === "character") {
-            fetchData(type, nextCharacter, setCharacters, setNextCharacter, setPrevCharacter);
+        for (let index = 1; index < pages + 1; index++) {
+            setPagesInComponent((prev) => [...prev, index])
         }
-    };
+    }, [pages])
 
-    const handlePrevPage = (type) => {
-        if (type === "character") {
-            fetchData(type, prevCharacter, setCharacters, setNextCharacter, setPrevCharacter);
+    useEffect(() => {
+        const index = pagesInComponent.indexOf(pageSelected)
+        if (nextStatus === true) {
+            setNextStatus(false)
+            setTotalButtons([...pagesInComponent.slice(index, index + 4)])
+        } else if (prevStatus === true) {
+            setPrevStatus(false)
+            setTotalButtons([...pagesInComponent.slice(index - 1, index + 3)])
+        } else if (buttonFind === true) {
+            setTotalButtons([...pagesInComponent.slice(index, index + 4)])
+        } else {
+            setTotalButtons([...pagesInComponent.slice(index, index + 4)])
         }
-    };
+    }, [prevStatus, nextStatus, pagesInComponent, pages, pageSelected,buttonFind])
 
     return (
         <DataContext.Provider
             value={{
                 characters,
                 recenCharacters,
-                handleNextPage,
-                handlePrevPage,
+                totalButtons,
+                pageSelected,
+                setPageSelected,
+                setPrevStatus,
+                setNextStatus,
+                setButtonFind,
+                nextStatus,
+                prevStatus,
+                buttonFind
             }}
         >
             {children}

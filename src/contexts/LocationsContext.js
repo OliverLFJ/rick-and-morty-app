@@ -40,7 +40,6 @@ export const DataLocationsProvider = ({ children }) => {
     }, [locations]);
 
 
-    console.log(countData)
     return (
         <LocationsContext.Provider
             value={{
