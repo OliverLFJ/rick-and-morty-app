@@ -525,7 +525,10 @@ html {
   word-break: keep-all;
   text-align: center;
   padding: 1.3rem;
+}
 
+.individual-character-container{
+  
 }
 
 @media (min-width: 640px) {

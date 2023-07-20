@@ -6,6 +6,7 @@ import { DataContextProvider } from './contexts/DataContext';
 import { EpisodesContextProvider } from './contexts/EpisodesContext';
 import { DataLocationsProvider } from './contexts/LocationsContext';
 import { useShowMenuContext } from './contexts/ShowMenuContext';
+import { DataIndividualContextProvider } from './contexts/DataIndividualContext';
 
 const App = () => {
 
@@ -21,7 +22,9 @@ const App = () => {
           <Header />
           <EpisodesContextProvider>
             <DataLocationsProvider>
-              <Content />
+              <DataIndividualContextProvider>
+                <Content />
+              </DataIndividualContextProvider>
             </DataLocationsProvider>
           </EpisodesContextProvider>
         </DataContextProvider>
