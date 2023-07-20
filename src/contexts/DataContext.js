@@ -13,6 +13,13 @@ export const DataContextProvider = ({ children }) => {
     const [nextStatus, setNextStatus] = useState(false)
     const [buttonFind, setButtonFind] = useState(false)
 
+    //State variables to filter the API
+
+    const [name, setName] = useState('')
+    const [status, setStatus] = useState('')
+    const [specie, setSpecie] = useState('')
+    const [gender, setGender] = useState('')
+
     useEffect(() => {
         fetch('https://rickandmortyapi.com/api/character?page=42')
             .then((response) => response.json())
@@ -21,19 +28,36 @@ export const DataContextProvider = ({ children }) => {
 
 
     useEffect(() => {
-        fetch(`https://rickandmortyapi.com/api/character/?page=${pageSelected}&name=&status=&specie=&gender=`)
-            .then((response) => response.json())
+        fetch(`https://rickandmortyapi.com/api/character/?page=${pageSelected}&name=${name}&status=${status}&specie=${specie}&gender=${gender}`)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
             .then((data) => {
                 setCharacters(data.results);
                 setPages(data.info.pages);
+            })
+            .catch((error) => {
+                console.error("Error fetching data:", error);
+                setCharacters([])
+                setPageSelected(1)
+                setPagesInComponent([])
+                setPages(0)
+                setTotalButtons([])
+                setButtonFind(false)
+                setNextStatus(false)
+                setPrevStatus(false)
             });
-    }, [pageSelected]);
+    }, [pageSelected, name, status, specie, gender]);
 
     useEffect(() => {
+        setPagesInComponent([]);
         for (let index = 1; index < pages + 1; index++) {
-            setPagesInComponent((prev) => [...prev, index])
+            setPagesInComponent((prev) => [...prev, index]);
         }
-    }, [pages])
+    }, [pages]);
 
     useEffect(() => {
         const index = pagesInComponent.indexOf(pageSelected)
@@ -48,7 +72,7 @@ export const DataContextProvider = ({ children }) => {
         } else {
             setTotalButtons([...pagesInComponent.slice(index, index + 4)])
         }
-    }, [prevStatus, nextStatus, pagesInComponent, pages, pageSelected,buttonFind])
+    }, [prevStatus, nextStatus, pagesInComponent, pages, pageSelected, buttonFind])
 
     return (
         <DataContext.Provider
@@ -63,7 +87,15 @@ export const DataContextProvider = ({ children }) => {
                 setButtonFind,
                 nextStatus,
                 prevStatus,
-                buttonFind
+                buttonFind,
+                setGender,
+                setSpecie,
+                setStatus,
+                setName,
+                status,
+                specie,
+                gender,
+                setPagesInComponent
             }}
         >
             {children}

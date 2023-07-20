@@ -5,11 +5,17 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { DataContextProvider } from './contexts/DataContext';
 import { EpisodesContextProvider } from './contexts/EpisodesContext';
 import { DataLocationsProvider } from './contexts/LocationsContext';
+import { useShowMenuContext } from './contexts/ShowMenuContext';
 
 const App = () => {
 
+  const { setShowMenu } = useShowMenuContext()
+
+  const handleScroll = () => {
+    setShowMenu(false)
+  };
   return (
-    <div className='container'>
+    <div className='container' onScroll={handleScroll}>
       <Router>
         <Header />
         <DataContextProvider>

@@ -1,10 +1,7 @@
-import { Link, Route, Routes, useLocation } from 'react-router-dom';
-import Home from "./content-components/Home"
-import AboutCharacter from "./content-components/AboutCharacter"
-import EpisodeInfo from "./content-components/EpisodeInfo"
-import LocationInfo from './content-components/LocationInfo';
+import { Link, useLocation } from 'react-router-dom';
 import { useShowMenuContext } from '../contexts/ShowMenuContext';
 import slime from './../assets/slime.png'
+import RoutesComponent from '../routes/RoutesComponent';
 
 const Content = () => {
 
@@ -13,15 +10,11 @@ const Content = () => {
     const showMenubutton = () => {
         setShowMenu(!showMenu)
     }
-
+   
+      
     return (
         <div className="main">
-            <Routes>
-                <Route exact path='/' element={<Home />} />
-                <Route exact path='/about-character' element={<AboutCharacter />} />
-                <Route exact path='/episode-info' element={<EpisodeInfo />} />
-                <Route exact path='/location-info' element={<LocationInfo />} />
-            </Routes>
+            <RoutesComponent />
             <div className={showMenu ? 'option-menu-modal' : 'option-menu-modal option-menu-modal-show'}>
                 <ul className='routes'>
                     <li className='nav-option-list' onClick={showMenubutton}>

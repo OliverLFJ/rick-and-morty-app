@@ -4,6 +4,7 @@ import { useEpisodesContext } from "../../contexts/EpisodesContext";
 const Home = () => {
     const { recenCharacters } = useDataContext();
     const { recenEpisodes } = useEpisodesContext();
+    
     return (
         <div className="character-general-container">
             <h3 className="title-recents">Recent Characters</h3>

@@ -23,6 +23,10 @@ export const DataLocationsProvider = ({ children }) => {
                 setLocations(data.residents)
             }
             )
+            .catch((error) => {
+                setLocationInfo([])
+                setLocations([])
+            });
     }, [location])
 
     const fetchCharacterData = async () => {
