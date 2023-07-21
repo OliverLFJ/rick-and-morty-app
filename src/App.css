@@ -677,6 +677,9 @@ html {
 
 @media (min-width: 640px) {
 
+  .main {
+    background-color: rebeccapurple;
+  }
 
   .container-icon-menu {
     display: inline-flex;
@@ -784,7 +787,9 @@ html {
 
 @media screen and (min-width: 768px) {
 
-
+  .main {
+    background-color: red;
+  }
 
   .container-icon-menu {
     display: inline-flex;
@@ -900,6 +905,9 @@ html {
 
 @media screen and (min-width: 1024px) {
 
+  .main {
+    background-color: darkcyan;
+  }
 
   .container-recents {
     display: grid;
@@ -1000,7 +1008,9 @@ html {
 }
 
 @media screen and (min-width: 1024px) and (height: 600px) {
-
+  .main {
+    background-color: lightcoral;
+  }
 
   .container-recents {
     display: grid;
@@ -1143,6 +1153,9 @@ html {
 
 @media screen and (width: 1024px) and (height: 768px) {
 
+  .main {
+    background-color: coral;
+  }
 
   .container-recents {
     display: grid;
@@ -1307,6 +1320,9 @@ html {
 
 @media screen and (min-width: 1280px) {
 
+  .main {
+    background-color: darkolivegreen;
+  }
 
   .active-link {
     font-size: 1.4rem;
@@ -1484,6 +1500,9 @@ html {
 }
 
 @media screen and (min-width: 1360px) {
+  .main {
+    background-color: hotpink;
+  }
 
   .active-link {
     font-size: 1.4rem;
@@ -1651,6 +1670,10 @@ html {
 
 @media screen and (min-width: 1400px) {
 
+  .main {
+    background-color: darkgoldenrod;
+  }
+
   .active-link {
     font-size: 1.4rem;
   }
@@ -1816,6 +1839,9 @@ html {
 }
 
 @media screen and (min-width: 1600px) {
+  .main {
+    background-color: darkgreen;
+  }
 
   .active-link {
     font-size: 2.2rem;
@@ -2324,7 +2350,8 @@ html {
     padding: 2rem;
     border-radius: 3rem;
   }
-  .form-group{
+
+  .form-group {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
