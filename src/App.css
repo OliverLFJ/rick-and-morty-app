@@ -906,8 +906,12 @@ html {
   }
 
   .dont-find-container {
-    width: 70%;
-    margin-top: 10%;
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
   }
 
   .filter-name-button {
@@ -1028,6 +1032,15 @@ html {
 
   .form-input {
     width: 25vh;
+  }
+
+  .dont-find-container {
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
   }
 }
 
@@ -1169,9 +1182,12 @@ html {
 
   .dont-find-container {
     width: 45%;
-    margin-top: 1%;
-    height: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
 
   .image-dont-find {
     width: 100%;
@@ -1342,13 +1358,15 @@ html {
   }
 
   .dont-find-container {
-    width: 45%;
-    margin-top: 1%;
-    height: 100%;
+    margin: auto;
+    width: fit-content;
+    height: max-content;
+    margin-top: 2rem;
   }
 
   .image-dont-find {
-    width: 100%;
+    width: 20vh !important;
+    height: 46vh !important;
   }
 
   .item-list {
@@ -1421,9 +1439,9 @@ html {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 23vh;
     margin-bottom: -1rem;
     z-index: 0;
+    height: max-content;
   }
 
   .option-menu-modal {
@@ -1432,8 +1450,7 @@ html {
 
   .slime-container>img {
     width: 100%;
-    height: 12vh;
-    margin-top: 6vh;
+    height: 14vh;
   }
 
   .logo-container {
@@ -1461,11 +1478,7 @@ html {
   }
 
   .option-menu-modal-show {
-    margin-top: -28vh;
-  }
-
-  .slime-container {
-    height: 30vh;
+    margin-top: -38vh;
   }
 
   .slime-container>img {
@@ -1487,13 +1500,20 @@ html {
     border-radius: 0px 0px 30px 30px;
   }
 
+  .image-character {
+    width: 50%;
+    height: 80%;
+    padding: 2rem;
+    border-radius: 3rem;
+  }
+
   .episode-container {
     gap: 3rem;
   }
 
   .individual-character-container {
-    width: 50%;
-    margin-top: 25vh;
+    width: 40%;
+    margin-top: 10vh;
   }
 
   .container {
@@ -1515,15 +1535,15 @@ html {
   }
 
   .information-card-title {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 
   .card-information-information {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .name-character {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   .state-character {
@@ -1537,11 +1557,11 @@ html {
   }
 
   .button-paginate {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 1rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    font-size: 0.9rem;
   }
 
   .button-container {
@@ -1552,14 +1572,17 @@ html {
     font-size: 1.3rem;
   }
 
+
   .dont-find-container {
-    width: 45%;
-    margin-top: 1%;
-    height: 100%;
+    margin: auto;
+    width: fit-content;
+    height: max-content;
+    margin-top: 2rem;
   }
 
   .image-dont-find {
-    width: 100%;
+    width: 20vh !important;
+    height: 46vh !important;
   }
 
   .character-general-container {
@@ -1573,11 +1596,11 @@ html {
   }
 
   .active-link {
-    font-size: 1.4rem;
+    font-size: 1.3rem !important;
   }
 
   .item-list {
-    font-size: 1.4rem !important;
+    font-size: 1.3rem !important;
   }
 
   .item-list:hover {
@@ -1644,11 +1667,178 @@ html {
   }
 
   .option-menu-modal-show {
-    margin-top: -28vh;
+    margin-top: -30vh;
+  }
+
+  .slime-container>img {
+    width: 100%;
+    aspect-ratio: 19/6;
+  }
+
+  .card-recent-character {
+    width: 35vh;
+    height: 49vh;
+  }
+
+  .character-general-container {
+    margin-top: 3em !important;
+  }
+
+  .character-img {
+    width: 100%;
+    height: 95%;
+  }
+
+  .episode-container::after {
+    border-radius: 0px 0px 30px 30px;
+  }
+
+  .episode-container {
+    gap: 3rem;
+  }
+
+  .individual-character-container {
+    width: 50%;
+    margin-top: 2vh;
+  }
+
+  .container {
+    grid-template-rows: 10em 1fr;
+  }
+
+  .episode-container>h3 {
+    font-size: 1rem;
+  }
+
+  .title-recents {
+    font-size: 4vh;
+  }
+
+  .info-character {
+    font-size: 2vh;
+    height: 19vh;
+    gap: 1vh;
+  }
+
+  .information-card-title {
+    font-size: 1.8rem;
+  }
+
+  .card-information-information {
+    font-size: 1.5rem;
+  }
+
+  .name-character {
+    font-size: 1.2rem;
+  }
+
+  .state-character {
+    font-size: 1rem;
+  }
+
+  .footer-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-paginate {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .button-container {
+    gap: 2rem;
+  }
+
+  .select-episodes {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+
+  .main {
+    background-color: darkgoldenrod;
+  }
+
+  .active-link {
+    font-size: 1.4rem !important;
+  }
+
+  .item-list {
+    font-size: 1.4rem !important;
+  }
+
+  .container-recents {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+        minmax(35vh, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .menu-desktop {
+    display: inline-flex;
+  }
+
+  .routes-mobile {
+    display: none !important;
   }
 
   .slime-container {
-    height: 30vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 23vh;
+    margin-bottom: -1rem;
+    z-index: 0;
+  }
+
+  .option-menu-modal {
+    background-color: transparent;
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2vh;
+  }
+
+  .slime-container>img {
+    width: 100%;
+    height: 14vh;
+  }
+
+  .logo-container {
+    width: 25%;
+    background-size: contain;
+  }
+
+  .container-icon-menu {
+    display: none;
+  }
+
+  .menu-desktop>.routes {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .menu-desktop>.routes>.nav-option-list {
+    list-style: none;
+    font-size: 1rem;
+  }
+
+  .menu-desktop>.routes>.nav-option-list:hover {
+    color: #40B5CB;
+  }
+
+  .option-menu-modal-show {
+    margin-top: -30vh;
   }
 
   .slime-container>img {
@@ -1668,6 +1858,10 @@ html {
 
   .episode-container::after {
     border-radius: 0px 0px 30px 30px;
+  }
+
+  .form-input-select {
+    width: 20vh;
   }
 
   .episode-container {
@@ -1706,7 +1900,7 @@ html {
   }
 
   .name-character {
-    font-size: 2rem;
+    font-size: 1.3rem !important;
   }
 
   .state-character {
@@ -1734,16 +1928,19 @@ html {
   .select-episodes {
     font-size: 1.3rem;
   }
+
+  .form-input {
+    width: 45vh;
+  }
 }
 
-@media screen and (min-width: 1400px) {
-
+@media screen and (min-width: 1680px) {
   .main {
-    background-color: darkgoldenrod;
+    background-color: darkgreen;
   }
 
   .active-link {
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
   }
 
   .item-list {
@@ -1771,433 +1968,8 @@ html {
     display: none !important;
   }
 
-  .slime-container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 23vh;
-    margin-bottom: -1rem;
-    z-index: 0;
-  }
-
   .option-menu-modal {
     background-color: transparent;
-  }
-
-  .slime-container>img {
-    width: 100%;
-    height: 14vh;
-  }
-
-  .logo-container {
-    width: 25%;
-    background-size: contain;
-  }
-
-  .container-icon-menu {
-    display: none;
-  }
-
-  .menu-desktop>.routes {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-  }
-
-  .menu-desktop>.routes>.nav-option-list {
-    list-style: none;
-    font-size: 1rem;
-  }
-
-  .menu-desktop>.routes>.nav-option-list:hover {
-    color: #40B5CB;
-  }
-
-  .option-menu-modal-show {
-    margin-top: -28vh;
-  }
-
-  .slime-container {
-    height: 30vh;
-  }
-
-  .slime-container>img {
-    width: 100%;
-    aspect-ratio: 19/6;
-  }
-
-  .card-recent-character {
-    width: 35vh;
-    height: 49vh;
-  }
-
-  .character-img {
-    width: 100%;
-    height: 95%;
-  }
-
-  .episode-container::after {
-    border-radius: 0px 0px 30px 30px;
-  }
-
-  .episode-container {
-    gap: 3rem;
-  }
-
-  .individual-character-container {
-    width: 50%;
-    margin-top: 25vh;
-  }
-
-  .container {
-    grid-template-rows: 10em 1fr;
-  }
-
-  .episode-container>h3 {
-    font-size: 1rem;
-  }
-
-  .title-recents {
-    font-size: 4vh;
-  }
-
-  .info-character {
-    font-size: 2vh;
-    height: 19vh;
-    gap: 1vh;
-  }
-
-  .information-card-title {
-    font-size: 1.8rem;
-  }
-
-  .card-information-information {
-    font-size: 1.5rem;
-  }
-
-  .name-character {
-    font-size: 2rem;
-  }
-
-  .state-character {
-    font-size: 1rem;
-  }
-
-  .footer-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .button-paginate {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 1rem;
-  }
-
-  .button-container {
-    gap: 2rem;
-  }
-
-  .select-episodes {
-    font-size: 1.3rem;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .main {
-    background-color: darkgreen;
-  }
-
-  .active-link {
-    font-size: 2.2rem;
-  }
-
-  .item-list {
-    font-size: 2.2rem !important;
-  }
-
-  .item-list:hover {
-    color: #186f7e;
-    transform: scale(9.2) !important;
-  }
-
-  .container-recents {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,
-        minmax(35vh, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-
-  .menu-desktop {
-    display: inline-flex;
-  }
-
-  .routes-mobile {
-    display: none !important;
-  }
-
-  .slime-container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 23vh;
-    margin-bottom: -1rem;
-    z-index: 0;
-  }
-
-  .option-menu-modal {
-    background-color: transparent;
-  }
-
-  .slime-container>img {
-    width: 100%;
-    height: 14vh;
-    margin-top: 3.4vh;
-  }
-
-  .logo-container {
-    width: 25%;
-    background-size: contain;
-    background-position: 0rem;
-  }
-
-  .container-icon-menu {
-    display: none;
-  }
-
-  .menu-desktop>.routes {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-  }
-
-  .menu-desktop>.routes>.nav-option-list {
-    list-style: none;
-    font-size: 1rem;
-  }
-
-  .menu-desktop>.routes>.nav-option-list:hover {
-    color: #40B5CB;
-  }
-
-  .option-menu-modal-show {
-    margin-top: -26vh;
-  }
-
-  .slime-container {
-    height: 30vh;
-  }
-
-  .slime-container>img {
-    width: 100%;
-    aspect-ratio: 19/6;
-  }
-
-  .card-recent-character {
-    width: 36vh;
-    height: 45vh;
-  }
-
-  .character-img {
-    width: 100%;
-    height: 95%;
-  }
-
-  .episode-container::after {
-    border-radius: 0px 0px 30px 30px;
-  }
-
-  .episode-container {
-    gap: 4rem;
-  }
-
-  .individual-character-container {
-    width: 50%;
-    margin-top: 25vh;
-  }
-
-  .container {
-    grid-template-rows: 14em 1fr;
-  }
-
-  .episodes-general-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,
-        minmax(30rem, 1fr));
-    gap: 2rem;
-  }
-
-  .episode-container>h3 {
-    font-size: 2rem;
-  }
-
-  .title-recents {
-    font-size: 4vh;
-  }
-
-  .info-character {
-    font-size: 2vh;
-    height: 14vh;
-  }
-
-  .information-card-title {
-    font-size: 1.8rem;
-  }
-
-  .card-information-information {
-    font-size: 1.5rem;
-  }
-
-  .character-general-container {
-    margin-top: 14rem;
-  }
-
-  .name-character {
-    font-size: 2.4rem;
-  }
-
-  .state-character {
-    font-size: 1.3rem !important;
-  }
-
-  .footer-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .button-paginate {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    font-size: 2rem;
-  }
-
-  .button-container {
-    gap: 2rem;
-  }
-
-  .portal-resource {
-    width: 5vh;
-    height: 5vh;
-    font-size: 1.7rem;
-  }
-
-  .name-character {
-    font-size: 3vh;
-  }
-
-  .title-episode {
-    font-size: 5vh;
-  }
-
-  .header {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  .active-link {
-    color: #04333b;
-    font-weight: 600;
-    letter-spacing: 0.2rem;
-    font-weight: bold;
-  }
-
-  .select-episodes {
-    font-size: 1.9rem;
-  }
-
-  .state-character {
-    font-size: 2rem;
-  }
-
-  .label-filter {
-    font-size: 2.2rem;
-  }
-
-  .form-input {
-    width: 70vh;
-    font-size: 2rem;
-  }
-
-  .form-input-select {
-    font-size: 1.8rem;
-  }
-
-  .clean-button {
-    font-size: 1.5rem;
-    font-weight: normal;
-  }
-
-  .episode-container>h3 {
-    font-size: 1.5rem;
-  }
-
-  .information-card-title {
-    font-size: 3rem;
-  }
-
-  .card-information-information {
-    font-size: 3rem;
-  }
-
-  .main {
-    padding-bottom: 4vh;
-  }
-}
-
-@media screen and (min-width: 1901px) {
-  .main {
-    background-color: darkgrey;
-  }
-
-  .active-link {
-    font-size: 1.6rem;
-  }
-
-  .item-list {
-    font-size: 1.6rem !important;
-  }
-
-  .item-list:hover {
-    color: #186f7e;
-    transform: scale(9.2) !important;
-  }
-
-  .container-recents {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,
-        minmax(35vh, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-
-  .menu-desktop {
-    display: inline-flex;
-  }
-
-  .routes-mobile {
-    display: none !important;
-  }
-
-  .slime-container {
-    width: 100%;
-    height: 2vh;
-  }
-
-  .option-menu-modal {
-    background-color: transparent;
-  }
-
-  .slime-container>img {
-    width: 100%;
-    height: 10vh;
-    margin-top: -4vh;
   }
 
   .logo-container {
@@ -2226,17 +1998,7 @@ html {
   }
 
   .option-menu-modal-show {
-    margin-top: -29.5vh;
-  }
-
-  .slime-container {
-    height: 45%;
-  }
-
-  .slime-container>img {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 1/1
+    margin-top: -32.4vh;
   }
 
   .card-recent-character {
@@ -2332,7 +2094,7 @@ html {
   }
 
   .title-episode {
-    font-size: 3vh;
+    font-size: 4vh;
   }
 
   .header {
@@ -2353,6 +2115,290 @@ html {
 
   .state-character {
     font-size: 2rem;
+  }
+
+  .label-filter {
+    font-size: 1.6rem;
+  }
+
+  .form-input {
+    width: 30vh;
+    font-size: 1.3rem;
+  }
+
+  .form-input-select {
+    font-size: 1.2rem;
+  }
+
+  .clean-button {
+    font-size: 1.1rem;
+    font-weight: normal;
+    padding: 0.9rem;
+  }
+
+  .episode-container>h3 {
+    font-size: 1.4rem;
+  }
+
+  .information-card-title {
+    font-size: 1.6rem;
+  }
+
+  .card-information-information {
+    font-size: 1.4rem;
+  }
+
+  .title-character {
+    font-size: 3rem;
+  }
+
+  .title-container-card {
+    height: 11vh;
+  }
+
+  .dont-find-container {
+    width: 40%;
+    margin-top: 1%;
+    height: 80vh;
+  }
+
+  .slime-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 23vh;
+    margin-bottom: -1rem;
+    z-index: 0;
+  }
+
+  .slime-container>img {
+    width: 100%;
+    height: 14vh;
+    margin-top: 3.4vh;
+  }
+
+  .slime-container>img {
+    width: 100%;
+    aspect-ratio: 19/6;
+  }
+
+  .image-container-dont-find {
+    width: 50%;
+    height: 80%;
+  }
+
+  .image-dont-find {
+    width: 50%;
+  }
+
+  .filter-name-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .image-character {
+    width: 50%;
+    height: 80%;
+    padding: 2rem;
+    border-radius: 3rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.5vh;
+  }
+
+  .form-input-select {
+    width: 40vh !important;
+  }
+
+}
+
+@media screen and (min-width: 1901px) {
+  .main {
+    background-color: darkgrey;
+  }
+
+  .active-link {
+    font-size: 1.6rem !important;
+  }
+
+  .item-list {
+    font-size: 1.6rem !important;
+  }
+
+  .item-list:hover {
+    color: #186f7e;
+    transform: scale(9.2) !important;
+  }
+
+  .container-recents {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+        minmax(35vh, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .menu-desktop {
+    display: inline-flex;
+  }
+
+  .routes-mobile {
+    display: none !important;
+  }
+
+  .option-menu-modal {
+    background-color: transparent;
+  }
+
+  .logo-container {
+    width: 20%;
+    background-size: contain;
+    background-position: 0rem;
+  }
+
+  .container-icon-menu {
+    display: none;
+  }
+
+  .menu-desktop>.routes {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .menu-desktop>.routes>.nav-option-list {
+    list-style: none;
+    font-size: 1rem;
+  }
+
+  .menu-desktop>.routes>.nav-option-list:hover {
+    color: #40B5CB;
+  }
+
+  .option-menu-modal-show {
+    margin-top: -29.5vh;
+  }
+
+  .card-recent-character {
+    width: 37vh;
+    height: 45vh;
+  }
+
+  .character-img {
+    width: 100%;
+    height: 95%;
+  }
+
+  .episode-container::after {
+    border-radius: 0px 0px 30px 30px;
+  }
+
+  .episode-container {
+    gap: 2.5rem;
+    width: 35vh;
+  }
+
+  .individual-character-container {
+    width: 30%;
+    margin-top: 13vh;
+  }
+
+  .container {
+    grid-template-rows: 9em 1fr;
+  }
+
+  .episodes-general-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+        minmax(23rem, 1fr));
+    gap: 2rem;
+  }
+
+  .title-recents {
+    font-size: 4vh;
+  }
+
+  .info-character {
+    font-size: 2vh;
+    height: 14vh;
+  }
+
+  .information-card-title {
+    font-size: 1.8rem;
+  }
+
+  .card-information-information {
+    font-size: 1.5rem;
+  }
+
+  .character-general-container {
+    margin-top: 8rem !important;
+  }
+
+  .name-character {
+    font-size: 2.4rem;
+  }
+
+  .state-character {
+    font-size: 1rem;
+  }
+
+  .footer-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-paginate {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    font-size: 1.6rem;
+  }
+
+  .button-container {
+    gap: 2rem;
+  }
+
+  .portal-resource {
+    width: 5vh;
+    height: 5vh;
+    font-size: 1.3rem;
+  }
+
+  .name-character {
+    font-size: 3vh;
+  }
+
+  .title-episode {
+    font-size: 3vh;
+  }
+
+  .header {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .active-link {
+    color: #04333b;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+  }
+
+  .select-episodes {
+    font-size: 1.3rem;
+  }
+
+  .state-character {
+    font-size: 1.2rem;
   }
 
   .label-filter {
@@ -2428,4 +2474,26 @@ html {
     justify-content: flex-start;
     gap: 1.5vh;
   }
+
+  .slime-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 23vh;
+    margin-bottom: -1rem;
+    z-index: 0;
+  }
+
+  .slime-container>img {
+    width: 100%;
+    height: 14vh;
+    margin-top: 3.4vh;
+  }
+
+
+  .slime-container>img {
+    width: 100%;
+    aspect-ratio: 19/6;
+  }
+
 }
