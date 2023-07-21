@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.459d3571.css",
+    "main.js": "/static/js/main.6a77710f.js",
+    "static/js/787.9add5da9.chunk.js": "/static/js/787.9add5da9.chunk.js",
+    "static/media/slimeLargQuality.png": "/static/media/slimeLargQuality.93e490fcf38e4c2944f6.png",
+    "static/media/logo.png": "/static/media/logo.8d4cb6bf675e17983858.png",
+    "static/media/rickmorty.png": "/static/media/rickmorty.9e75726613fc020d4fa7.png",
+    "index.html": "/index.html",
+    "main.459d3571.css.map": "/static/css/main.459d3571.css.map",
+    "main.6a77710f.js.map": "/static/js/main.6a77710f.js.map",
+    "787.9add5da9.chunk.js.map": "/static/js/787.9add5da9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.459d3571.css",
+    "static/js/main.6a77710f.js"
+  ]
+}
