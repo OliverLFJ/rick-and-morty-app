@@ -2036,7 +2036,7 @@ html {
   }
 
   .clean-button {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: normal;
   }
 
@@ -2060,11 +2060,11 @@ html {
 @media screen and (min-width: 1901px) {
 
   .active-link {
-    font-size: 2.4rem;
+    font-size: 1.6rem;
   }
 
   .item-list {
-    font-size: 2.4rem !important;
+    font-size: 1.6rem !important;
   }
 
   .item-list:hover {
@@ -2089,12 +2089,8 @@ html {
   }
 
   .slime-container {
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    height: 23vh;
-    margin-bottom: -1rem;
-    z-index: 0;
+    height: 2vh;
   }
 
   .option-menu-modal {
@@ -2133,11 +2129,11 @@ html {
   }
 
   .option-menu-modal-show {
-    margin-top: -26vh;
+    margin-top: -29.5vh;
   }
 
   .slime-container {
-    height: 50%;
+    height: 45%;
   }
 
   .slime-container>img {
@@ -2170,7 +2166,7 @@ html {
   }
 
   .container {
-    grid-template-rows: 16em 1fr;
+    grid-template-rows: 9em 1fr;
   }
 
   .episodes-general-container {
@@ -2202,7 +2198,7 @@ html {
   }
 
   .character-general-container {
-    margin-top: 25rem;
+    margin-top: 10rem;
   }
 
   .name-character {
@@ -2220,11 +2216,11 @@ html {
   }
 
   .button-paginate {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    font-size: 2rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    font-size: 1.6rem;
   }
 
   .button-container {
@@ -2242,7 +2238,7 @@ html {
   }
 
   .title-episode {
-    font-size: 5vh;
+    font-size: 3vh;
   }
 
   .header {
@@ -2258,7 +2254,7 @@ html {
   }
 
   .select-episodes {
-    font-size: 2.3rem;
+    font-size: 1.3rem;
   }
 
   .state-character {
@@ -2266,20 +2262,20 @@ html {
   }
 
   .label-filter {
-    font-size: 3rem;
+    font-size: 1.6rem;
   }
 
   .form-input {
-    width: 70vh;
-    font-size: 2.4rem;
+    width: 30vh;
+    font-size: 1.5rem;
   }
 
   .form-input-select {
-    font-size: 2.4rem;
+    font-size: 1.5rem;
   }
 
   .clean-button {
-    font-size: 2.6rem;
+    font-size: 1.2rem;
     font-weight: normal;
   }
 
@@ -2293,10 +2289,6 @@ html {
 
   .card-information-information {
     font-size: 3rem;
-  }
-
-  .main {
-    padding-bottom: 4vh;
   }
 
   .title-character {
@@ -2320,5 +2312,12 @@ html {
 
   .image-dont-find {
     width: 50%;
+  }
+
+  .filter-name-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
   }
 }
