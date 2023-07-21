@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useShowMenuContext } from "../../contexts/ShowMenuContext";
 import slime from './../../assets/slime.png'
-
+import slimeLarge from './../../assets/slimeLargeQuality.png'
 
 const MenuMobile = () => {
     const { showMenu, setShowMenu } = useShowMenuContext()
@@ -11,7 +11,7 @@ const MenuMobile = () => {
     }
     return (
         <div className={showMenu ? 'option-menu-modal' : 'option-menu-modal option-menu-modal-show'}>
-            <ul className='routes'>
+            <ul className='routes routes-mobile'>
                 <li className='nav-option-list' onClick={showMenubutton}>
                     <Link className={location.pathname === '/' ? 'active-link' : 'item-list'} to="/" style={{ textDecoration: 'none' }}> Home</Link>
                 </li>
@@ -26,7 +26,7 @@ const MenuMobile = () => {
                 </li>
             </ul>
             <div className='slime-container'>
-                <img alt='slime in navbar' src={slime} />
+                <img alt='slime in navbar' src={slimeLarge} />
             </div>
         </div>
     )
