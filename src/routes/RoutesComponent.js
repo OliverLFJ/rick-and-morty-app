@@ -17,7 +17,7 @@ import DontFind from "../components/error-components/DontFind"
 const RoutesComponent = () => {
     return (
         <Routes>
-            <Route exact path='/home' element={<Home />} />
+            <Route exact path='/' element={<Home />} />
             <Route exact path='/characters' element={<AboutCharacter />} />
             <Route exact path='/episodes' element={<EpisodeInfo />} />
             <Route exact path='/locations' element={<LocationInfo />} />
