@@ -1,4 +1,8 @@
-// filtersReducer.js
+/**
+ * Este es mi reducer para el manejo de acciones de filtrado,
+ * aqui lo que hago es despachar el payload es decir la carga que debe llevar este reducer al contexto
+ * de data context que cree para filtrar la API.
+ */
 import { SET_NAME, SET_STATUS, SET_SPECIE, SET_GENDER } from './actionType'
 
 const filtersReducer = (state, action) => {

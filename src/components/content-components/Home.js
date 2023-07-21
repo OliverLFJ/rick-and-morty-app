@@ -1,3 +1,10 @@
+ /**
+     * Aqui hago igual una asignacion de valores con map
+     * a las tablas de personajes recientes y capitulos,
+     * esta es la pagina principal, igualmente como se esta mostrando
+     * personajes linkeo ese card al componente personaje individual.
+*/
+
 import { Link } from "react-router-dom";
 import { useDataContext } from "../../contexts/DataContext";
 import { useEpisodesContext } from "../../contexts/EpisodesContext";

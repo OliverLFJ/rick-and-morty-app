@@ -1,3 +1,9 @@
+/**
+     * Aqui asigno valores a los campos con un map de los datos de la API.
+     * Valido el length para mostrar el paginado, ya que si no hay tabla no
+     * deberia mostrarse.
+ */
+
 import { useDataContext } from "../../contexts/DataContext";
 import PaginatedButtons from "./PaginatedButtons";
 import FiltersCharacters from "./FiltersCharacters";
@@ -8,6 +14,7 @@ import { Link } from "react-router-dom";
 const AboutCharacter = () => {
     const { characters, dontFind } = useDataContext();
     const { setCharacter } = useDataIndividualContext();
+
     return (
         <div className="character-general-container">
             <FiltersCharacters />

@@ -2266,12 +2266,12 @@ html {
   }
 
   .label-filter {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .form-input {
     width: 70vh;
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 
   .form-input-select {
@@ -2307,8 +2307,6 @@ html {
     height: 15vh;
   }
 
-
-
   .dont-find-container {
     width: 40%;
     margin-top: 1%;
@@ -2319,7 +2317,6 @@ html {
     width: 50%;
     height: 80%;
   }
-
 
   .image-dont-find {
     width: 50%;

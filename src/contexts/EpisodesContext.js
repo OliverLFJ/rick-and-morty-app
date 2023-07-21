@@ -1,5 +1,11 @@
-import { createContext, useContext, useEffect, useState } from "react";
 
+/**
+ * Este context es para los datos obtenidos de la API en el endpoint de
+ * episodios, aqui utilizo la misma logica de los personajes
+ * a exepcion del paginado pues solo muestro los personajes.
+ */
+
+import { createContext, useContext, useEffect, useState } from "react";
 const EpisodesContext = createContext();
 export const useEpisodesContext = () => useContext(EpisodesContext);
 export const EpisodesContextProvider = ({ children }) => {

@@ -1,3 +1,10 @@
+/**
+     * Asigno valores con map y Linkeo para mandar al
+     * componente de personaje individual, tambien uso un 
+     * objeto para mostrar la cantidad de capitulos en un
+     * select y darle al usuario la opcion de elegir el capitulo.
+ */
+
 import { Link } from "react-router-dom";
 import { useDataIndividualContext } from "../../contexts/DataIndividualContext";
 import { useEpisodesContext } from "../../contexts/EpisodesContext";

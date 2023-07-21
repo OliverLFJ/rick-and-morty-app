@@ -1,8 +1,19 @@
+/**
+     * Aqui utilizo filtrado por medio de estados,
+     * para eso hice un reducer para encargarse de despachar 
+     * el evento que se necesite, por ejemplo filtro por nombre,
+     * especie, status, etc.
+     * 
+     * Los payloads y los tipos de accion los mando por medio
+     * de funciones, finalmente creo una funcion para limpiar 
+     * los datos al accionar un boton clean filters.
+     * 
+     * NOTA: Utilizo los eventos de los campos (e.target.value)
+ */
+
 import { useDataContext } from "../../contexts/DataContext"
 import { speciesData, genderData, statusData } from './../../utils/dataFilters.js'
 import { SET_NAME, SET_STATUS, SET_SPECIE, SET_GENDER } from './../../reducers/actionType';
-import { useEffect } from "react";
-
 
 const FiltersCharacters = () => {
 

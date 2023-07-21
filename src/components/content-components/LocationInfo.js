@@ -1,3 +1,9 @@
+/**
+     * Aqui tambien hago asignacion de valores a los campos de locaciones,
+     * como tambien hay personajes se realiza el linkeo del card al 
+     * componente personaje individual. 
+*/
+
 import { Link } from "react-router-dom";
 import { useLocationsContext } from "../../contexts/LocationsContext";
 import { useDataIndividualContext } from "../../contexts/DataIndividualContext";
@@ -7,7 +13,6 @@ const LocationInfo = () => {
     const changeLocation = (locationSelected) => {
         setLocation(locationSelected)
     }
-
     const { setCharacter } = useDataIndividualContext()
 
     return (

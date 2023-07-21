@@ -1,3 +1,12 @@
+/**
+ * Este es mi componente principal,
+ * aqui encapsulo con los contextos que necesita la aplicacion,
+ * esto evita el prop driling el cual es estar mandando propiedades del 
+ * componente padre a los hijos o viceversa, puede que muchas veces
+ * se ocupe un simple envio de parametros a algun componente hijo pero 
+ * si la aplicacion es grande no es buena opcion.
+ */
+
 import Header from './components/Header'
 import Content from './components/Content'
 import './App.css'

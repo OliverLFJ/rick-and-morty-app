@@ -1,5 +1,14 @@
 import { useDataContext } from "../../contexts/DataContext";
 
+/**
+     * Este es mi componente de botones para la paginacion de mi
+     * tabla de personajes, manejo cada click del paginado por medio
+     * de funciones y utilizo una variable obtenido del context de datos
+     * de personajes el me sirve para decirle al estado que va a hacer
+     * (dar click siguiente, previo o elegir una pagina del rango mostrado)
+*/
+
+
 const PaginatedButtons = () => {
 
     const {

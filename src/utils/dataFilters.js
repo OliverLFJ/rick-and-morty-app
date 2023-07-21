@@ -1,3 +1,8 @@
+/**
+ * Estos objetos son para mostrar en los select de los filtros
+ * lo maneje asi para evitar tener mucho codigo y para que se entienda mas el componente.
+ */
+
 const speciesData = [
     { label: "Nothing", value: '' },
     { label: "Human", value: "Human" },

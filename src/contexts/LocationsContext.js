@@ -1,5 +1,12 @@
-import { createContext, useContext, useEffect, useState } from "react";
+/**
+ * Este context es para manejar la informacion de
+ * locaciones del endpoint de la API.
+ * 
+ * Igualmente la logica es la misma que el anterior solo cambia el endpoint
+ * y que aqui no hago fetch para obtener datos recientes.
+ */
 
+import { createContext, useContext, useEffect, useState } from "react";
 const LocationsContext = createContext();
 export const useLocationsContext = () => useContext(LocationsContext);
 export const DataLocationsProvider = ({ children }) => {

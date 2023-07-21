@@ -1,7 +1,12 @@
+/**
+ * Este es el componente Header, aqui muestro el logo de la app y el menu
+ * o en si se requiere los iconos para mostra el menu de dispositivos
+ * moviles.
+ */
+
 import { CgMenuMotion, CgMenuRight } from "react-icons/cg";
 import { useShowMenuContext } from "../contexts/ShowMenuContext";
 import MenuDesktop from "./menu-components/MenuDesktop";
-import MenuMobile from "./menu-components/MenuMobile";
 
 const Header = () => {
 

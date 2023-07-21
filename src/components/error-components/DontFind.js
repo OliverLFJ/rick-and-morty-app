@@ -1,3 +1,11 @@
+/**
+     * Este es mi componente para el manejo de errores, 
+     * utilizo el mismo para evitar generar otros componentes
+     * 
+     * (ESTE COMPONENTE SE PUEDE ESCALAR)
+     * por ejemplo podria mandar un estado el cual en vez de mostrar "No results were found".
+*/
+
 import RickAndMorty from './../../assets/rickmorty.png'
 
 const DontFind = () => {

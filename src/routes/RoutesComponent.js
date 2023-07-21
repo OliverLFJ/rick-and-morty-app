@@ -1,3 +1,11 @@
+/**
+ * Este es mi componente de rutas, maneje las rutas 
+ * en componentes distintos para evitar mucho codigo en el componente Content.
+ * 
+ * aqui practicamente le digo hacia donde mandar al usuario o que mostrar en caso
+ * de que el usuario de click a alguna opcion del menu de navegacion.
+ */
+
 import { Route, Routes } from "react-router-dom"
 import Home from "../components/content-components/Home"
 import AboutCharacter from "../components/content-components/AboutCharacter"

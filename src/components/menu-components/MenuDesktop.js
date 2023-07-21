@@ -1,5 +1,9 @@
-import { Link, useLocation } from "react-router-dom";
+/**
+     * Este componente para el menu de computadoras de escritorio
+     * Simplemente es el menu para navegar por las distintas opciones
+ */
 
+import { Link, useLocation } from "react-router-dom";
 
 const MenuDesktop = () => {
     const location = useLocation();

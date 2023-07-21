@@ -1,9 +1,17 @@
-import { useDataIndividualContext } from "../../contexts/DataIndividualContext";
+/** 
+     * Este es mi componente para mostrar al personaje
+     * individualmente, primero verificamos que el objeto no venga vacio para que no suelte error, ya que
+     * tarda un poco en asignarle la data de la API y como el estado en ese
+     * momento viene vacio al intentar asignar informacion con un simple map
+     * suelta error.
+     * 
+     * Una vez se verifica que no venga vacio solamente se asigna el valor 
+     * a cada apartado.
+*/
 
+import { useDataIndividualContext } from "../../contexts/DataIndividualContext";
 const IndividualCharacter = () => {
     const { characterInformation } = useDataIndividualContext();
-
-    // Verificamos si characterInformation no está vacío
     if (Object.keys(characterInformation).length > 0) {
         return (
             <div className="individual-character-container">
@@ -43,8 +51,6 @@ const IndividualCharacter = () => {
                 </div>
             </div>
         );
-    } else {
-        return <p>No se encontró información del personaje.</p>;
     }
 };
 
