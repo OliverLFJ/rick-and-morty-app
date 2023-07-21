@@ -713,14 +713,14 @@ html {
   }
 
   .form-input {
-    width: 60vw;
+    width: 40vw;
     font-size: 1.1rem;
   }
 
   .clean-button {
     border: none;
     outline: none;
-    padding: 1rem;
+    padding: 0.9rem;
     font-weight: bold;
   }
 
@@ -759,7 +759,7 @@ html {
   }
 
   .character-general-container {
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
 
   .label-filter {
@@ -773,7 +773,7 @@ html {
   }
 
   .name-character {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
   }
 
   .episode-container::after {
@@ -782,6 +782,13 @@ html {
 
   .info-character {
     height: 13vh;
+  }
+
+  .filter-name-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2vh;
   }
 }
 
@@ -823,7 +830,7 @@ html {
   }
 
   .form-input {
-    width: 60vw;
+    width: 44vw;
     font-size: 1.1rem;
   }
 
@@ -869,11 +876,11 @@ html {
   }
 
   .character-general-container {
-    margin-top: 7rem;
+    margin-top: 6rem;
   }
 
   .label-filter {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
   }
 
@@ -894,12 +901,19 @@ html {
   }
 
   .name-character {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
+    word-wrap: break-word;
   }
 
   .dont-find-container {
     width: 70%;
     margin-top: 10%;
+  }
+
+  .filter-name-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 }
 
@@ -1005,6 +1019,16 @@ html {
   .state-character {
     font-size: 0.9rem;
   }
+
+  .filter-name-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .form-input {
+    width: 25vh;
+  }
 }
 
 @media screen and (min-width: 1024px) and (height: 600px) {
@@ -1020,6 +1044,15 @@ html {
     margin-top: 2rem;
   }
 
+  .item-list {
+    font-size: 1rem !important;
+  }
+
+  .active-link {
+    font-size: 1rem !important;
+  }
+
+
   .menu-desktop {
     display: inline-flex;
   }
@@ -1032,7 +1065,7 @@ html {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 23vh;
+    height: 20vh;
     margin-bottom: -1rem;
     z-index: 0;
   }
@@ -1043,8 +1076,7 @@ html {
 
   .slime-container>img {
     width: 100%;
-    height: 12vh;
-    margin-top: 6vh;
+    height: 100%;
   }
 
   .logo-container {
@@ -1072,11 +1104,7 @@ html {
   }
 
   .option-menu-modal-show {
-    margin-top: -28vh;
-  }
-
-  .slime-container {
-    height: 30vh;
+    margin-top: -36vh;
   }
 
   .slime-container>img {
@@ -1132,7 +1160,7 @@ html {
   }
 
   .name-character {
-    font-size: 3vh;
+    font-size: 2.4vh;
   }
 
   .state-character {
@@ -1149,6 +1177,13 @@ html {
     width: 100%;
   }
 
+  .character-general-container {
+    margin-top: 2rem;
+  }
+
+  .name-filter {
+    font-size: 0.7rem !important;
+  }
 }
 
 @media screen and (width: 1024px) and (height: 768px) {
@@ -1177,19 +1212,22 @@ html {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 23vh;
+    height: 17vh !important;
     margin-bottom: -1rem;
     z-index: 0;
   }
 
-  .option-menu-modal {
-    background-color: transparent;
-  }
-
   .slime-container>img {
     width: 100%;
-    height: 12vh;
-    margin-top: 5vh;
+    height: 100%;
+  }
+
+  .option-menu-modal-show {
+    margin-top: -38.5vh;
+  }
+
+  .option-menu-modal {
+    background-color: transparent;
   }
 
   .logo-container {
@@ -1214,10 +1252,6 @@ html {
 
   .menu-desktop>.routes>.nav-option-list:hover {
     color: #40B5CB;
-  }
-
-  .option-menu-modal-show {
-    margin-top: -28vh;
   }
 
   .slime-container {
@@ -1316,6 +1350,36 @@ html {
   .image-dont-find {
     width: 100%;
   }
+
+  .item-list {
+    font-size: 1rem !important;
+  }
+
+  .active-link {
+    font-size: 1rem !important;
+  }
+
+  .character-general-container {
+    margin-top: 3.4rem;
+  }
+
+  .label-filter {
+    font-size: 1.2rem;
+  }
+
+  .clean-button {
+    font-size: 1.2rem;
+    font-weight: normal;
+    padding: 0.7rem;
+  }
+
+  .title-episode {
+    font-size: 4vh;
+  }
+
+  .select-episodes {
+    font-size: 2vh;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -1325,11 +1389,11 @@ html {
   }
 
   .active-link {
-    font-size: 1.4rem;
+    font-size: 1.2rem !important;
   }
 
   .item-list {
-    font-size: 1.4rem !important;
+    font-size: 1.2rem !important;
   }
 
   .item-list:hover {
@@ -1496,6 +1560,10 @@ html {
 
   .image-dont-find {
     width: 100%;
+  }
+
+  .character-general-container {
+    margin-top: 4rem !important;
   }
 }
 
@@ -2084,6 +2152,9 @@ html {
 }
 
 @media screen and (min-width: 1901px) {
+  .main {
+    background-color: darkgrey;
+  }
 
   .active-link {
     font-size: 1.6rem;
