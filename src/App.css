@@ -2157,12 +2157,13 @@ html {
   }
 
   .episode-container {
-    gap: 4rem;
+    gap: 2.5rem;
+    width: 35vh;
   }
 
   .individual-character-container {
-    width: 50%;
-    margin-top: 25vh;
+    width: 30%;
+    margin-top: 13vh;
   }
 
   .container {
@@ -2172,12 +2173,8 @@ html {
   .episodes-general-container {
     display: grid;
     grid-template-columns: repeat(auto-fit,
-        minmax(30rem, 1fr));
+        minmax(23rem, 1fr));
     gap: 2rem;
-  }
-
-  .episode-container>h3 {
-    font-size: 2rem;
   }
 
   .title-recents {
@@ -2230,7 +2227,7 @@ html {
   .portal-resource {
     width: 5vh;
     height: 5vh;
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 
   .name-character {
@@ -2271,7 +2268,7 @@ html {
   }
 
   .form-input-select {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .clean-button {
@@ -2280,23 +2277,23 @@ html {
   }
 
   .episode-container>h3 {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
   }
 
   .information-card-title {
-    font-size: 3rem;
+    font-size: 1.6rem;
   }
 
   .card-information-information {
-    font-size: 3rem;
+    font-size: 1.4rem;
   }
 
   .title-character {
-    font-size: 6rem;
+    font-size: 3rem;
   }
 
   .title-container-card {
-    height: 15vh;
+    height: 11vh;
   }
 
   .dont-find-container {
@@ -2319,5 +2316,18 @@ html {
     flex-direction: row;
     justify-content: flex-start;
     gap: 1rem;
+  }
+
+  .image-character {
+    width: 50%;
+    height: 80%;
+    padding: 2rem;
+    border-radius: 3rem;
+  }
+  .form-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.5vh;
   }
 }
