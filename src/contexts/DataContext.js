@@ -5,7 +5,7 @@
  */
 
 import { createContext, useContext, useEffect, useReducer, useState } from "react";
-import filtersReducer from "../reducers/filtersReducer";
+import FiltersReducer from "../reducers/FiltersReduce";
 const DataContext = createContext();
 export const useDataContext = () => useContext(DataContext);
 export const DataContextProvider = ({ children }) => {
@@ -35,7 +35,7 @@ export const DataContextProvider = ({ children }) => {
         specie: '',
         gender: ''
     };
-    const [state, dispatch] = useReducer(filtersReducer, initialState);
+    const [state, dispatch] = useReducer(FiltersReducer, initialState);
     /**
      * Aqui fetch a la API de datos recientes
      * lo hice rapido con un paginado a la ultima pagina, ya que en si
