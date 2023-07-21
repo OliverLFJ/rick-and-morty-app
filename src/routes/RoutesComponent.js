@@ -17,12 +17,12 @@ import DontFind from "../components/error-components/DontFind"
 const RoutesComponent = () => {
     return (
         <Routes>
-            <Route exact path='/' element={<Home />} />
+            <Route exact path='/home' element={<Home />} />
             <Route exact path='/characters' element={<AboutCharacter />} />
             <Route exact path='/episodes' element={<EpisodeInfo />} />
             <Route exact path='/locations' element={<LocationInfo />} />
             <Route exact path='/character' element={<IndividualCharacter />} />
-            <Route path='*' element={<DontFind />}/>
+            <Route path='*' element={<DontFind />} />
         </Routes>
     )
 }
